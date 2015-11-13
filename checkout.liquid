@@ -1,0 +1,29 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html class="{{ checkout_html_classes }}">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, height=device-height, minimum-scale=1.0, user-scalable=0">
+
+    <title>{{ shop.name }} - {{ page_title }}</title>
+
+    {{ content_for_header }}
+
+    <link type="text/css" rel="stylesheet" media="all" href="{{ 'komono-shopify.css' | asset_url }}">
+
+    {{ checkout_stylesheets }}
+    {{ checkout_scripts }}
+  </head>
+  <body class="js-ups-access-point-locator">
+
+    {{ content_for_banner }}
+    {{ content_for_layout }}
+    {{ content_for_footer }}
+
+    {{ tracking_code }}
+
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+
+    {{ 'shopify-ups-access-point-locator.js'  | asset_url | script_tag }}
+  </body>
+</html>
